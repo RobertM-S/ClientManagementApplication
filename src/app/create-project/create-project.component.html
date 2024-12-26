@@ -1,0 +1,48 @@
+<h3>Add New Project</h3>
+<div>
+    <!-- Exports lots of properties to be used within HTML template -->
+    <form #createproject = "ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Id</label>
+            <input type="text" name="pid" class="form-control" [class.is-invalid]="pid.touched && pid.invalid" placeholder="Id" [(ngModel)]="project.pid" #pid="ngModel" required pattern="^[A-Za-z\s]+$" minlength="3">
+            <div *ngIf="pid.touched && pid.errors && pid.invalid">
+                <small id="pidHelp" class="text-danger" *ngIf="pid.errors['required']">Name Required</small>
+                <small id="pidHelp" class="text-danger" *ngIf="pid.errors['pattern'] && !pid.errors['minlength']">Name can only contain alphabet and space</small>
+                <small id="pidHelp" class="text-danger" *ngIf="pid.errors['minlength'] && !pid.errors['pattern']">Name must be at least 3 characters</small>
+                <small id="pidHelp" class="text-danger" *ngIf="pid.errors['minlength'] && pid.errors['pattern']">Name must be at least 3 characters</small>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="pname" class="form-control" [class.is-invalid]="pname.touched && pname.invalid" placeholder="Name" [(ngModel)]="project.pname" #pname="ngModel" required pattern="^[A-Za-z\s]+$" minlength="3">
+            <div *ngIf="pname.touched && pname.errors && pname.invalid">
+                <small id="nameHelp" class="text-danger" *ngIf="pname.errors['required']">Name Required</small>
+                <small id="nameHelp" class="text-danger" *ngIf="pname.errors['pattern'] && !pname.errors['minlength']">Name can only contain alphabet and space</small>
+                <small id="nameHelp" class="text-danger" *ngIf="pname.errors['minlength'] && !pname.errors['pattern']">Name must be at least 3 characters</small>
+                <small id="nameHelp" class="text-danger" *ngIf="pname.errors['minlength'] && pname.errors['pattern']">Name must be at least 3 characters</small>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label>description</label>
+            <input type="text" name="description" class="form-control" [class.is-invalid]="description.touched && description.invalid" placeholder="description" [(ngModel)]="project.description" #description="ngModel" required pattern="^[^@]+@[^@]+\.[^@]+$">
+            <div *ngIf="description.touched && description.errors && description.invalid">
+                <small id="emailHelp" class="text-danger" *ngIf="description.errors['required']">description Required</small>
+                <small id="emailHelp" class="text-danger" *ngIf="description.errors['pattern']">Must be a valid description</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>clientId</label>
+            <input type="text" name="clientId" class="form-control" [class.is-invalid]="clientId.touched && clientId.invalid" placeholder="clientId" [(ngModel)]="project.clientId" #clientId="ngModel" required pattern="^[0-9]+$" minlength="10">
+            <div *ngIf="clientId.touched && clientId.errors && clientId.invalid">
+                <small id="phoneHelp" class="text-danger" *ngIf="clientId.errors['required']">clientId Number Required</small>
+                <small id="phoneHelp" class="text-danger" *ngIf="clientId.errors['pattern']">clientId Number can only contain numbers</small>
+                <small id="phoneHelp" class="text-danger" *ngIf="clientId.errors['minlength']">clientId Number must be at least 10 characters</small>
+            </div>
+        </div>
+        <!--{{ename.className}}-->
+
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px; margin-bottom: 10px;">Submit</button>
+    </form>
+</div>

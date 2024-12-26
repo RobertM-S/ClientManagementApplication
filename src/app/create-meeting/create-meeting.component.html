@@ -1,0 +1,37 @@
+<h3>Add New Meeting</h3>
+<div>
+    <!-- Exports lots of properties to be used within HTML template -->
+    <form #createmeeting = "ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Id</label>
+            <input type="text" name="mid" class="form-control" [class.is-invalid]="mid.touched && mid.invalid" placeholder="Id" [(ngModel)]="meeting.mid" #mid="ngModel" required pattern="^[0-9]+$" minlength="3">
+            <div *ngIf="mid.touched && mid.errors && mid.invalid">
+                <small id="midHelp" class="text-danger" *ngIf="mid.errors['required']">Name Required</small>
+                <small id="midHelp" class="text-danger" *ngIf="mid.errors['pattern'] && !mid.errors['minlength']">Name can only contain alphabet and space</small>
+                <small id="midHelp" class="text-danger" *ngIf="mid.errors['minlength'] && !mid.errors['pattern']">Name must be at least 3 characters</small>
+                <small id="midHelp" class="text-danger" *ngIf="mid.errors['minlength'] && mid.errors['pattern']">Name must be at least 3 characters</small>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label>time</label>
+            <input type="text" name="time" class="form-control" [class.is-invalid]="time.touched && time.invalid" placeholder="time" [(ngModel)]="meeting.time" #time="ngModel" required pattern="^[^@]+@[^@]+\.[^@]+$">
+            <div *ngIf="time.touched && time.errors && time.invalid">
+                <small id="timeHelp" class="text-danger" *ngIf="time.errors['required']">time Required</small>
+                <small id="timeHelp" class="text-danger" *ngIf="time.errors['pattern']">Must be a valid time</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>projectId</label>
+            <input type="text" name="projectId" class="form-control" [class.is-invalid]="projectId.touched && projectId.invalid" placeholder="projectId" [(ngModel)]="meeting.projectId" #projectId="ngModel" required pattern="^[0-9]+$" minlength="10">
+            <div *ngIf="projectId.touched && projectId.errors && projectId.invalid">
+                <small id="phoneHelp" class="text-danger" *ngIf="projectId.errors['required']">projectId Number Required</small>
+                <small id="phoneHelp" class="text-danger" *ngIf="projectId.errors['pattern']">projectId Number can only contain numbers</small>
+                <small id="phoneHelp" class="text-danger" *ngIf="projectId.errors['minlength']">projectId Number must be at least 10 characters</small>
+            </div>
+        </div>
+        <!--{{ename.className}}-->
+
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px; margin-bottom: 10px;">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,96 @@
+{
+  "clients": [
+    {
+      "eid": "1",
+      "ename": "bob",
+      "email": "bob@gmail.com",
+      "phone": "1321312312",
+      "company": "Company",
+      "address": {
+        "country": "India",
+        "city": "Delhi",
+        "zipcode": "909090"
+      },
+      "id": "1"
+    },
+    {
+      "eid": "2",
+      "ename": "shalini123",
+      "email": "shalini@gmail.com",
+      "phone": "1321312312",
+      "company": "Company",
+      "address": {
+        "country": "India",
+        "city": "Delhi",
+        "zipcode": "909090"
+      },
+      "id": "2"
+    }
+  ],
+  "projects": [
+    {
+      "pname": "Drums",
+      "description": "shalini@gmail.com",
+      "clientId": "1",
+      "id": "1"
+    },
+    {
+      "pname": "Guitar",
+      "description": "shalini@gmail.com",
+      "clientId": "2",
+      "id": "2"
+    },
+    {
+      "pname": "Keyboard",
+      "description": "shalini@gmail.com",
+      "clientId": "2",
+      "id": "3"
+    },
+    {
+      "pname": "Bass",
+      "description": "shalini@gmail.com",
+      "clientId": "1",
+      "id": "4"
+    },
+    {
+      "pname": "Vocals",
+      "description": "shalini@gmail.com",
+      "clientId": "1",
+      "id": "5"
+    }
+  ],
+  "meetings": [
+    {
+      "mid": "1",
+      "time": "26/12/2024",
+      "projectId": "1",
+      "id": "1"
+    },
+    {
+      "mid": "2",
+      "time": "27/12/2024",
+      "projectId": "2",
+      "id": "2"
+    },
+    {
+      "mid": "3",
+      "time": "28/12/2024",
+      "projectId": "3",
+      "id": "3"
+    }
+  ],
+  "users": [
+    {
+      "username": "abc",
+      "password": "abc123"
+    },
+    {
+      "username": "pqr",
+      "password": "pqr123"
+    },
+    {
+      "username": "user",
+      "password": "user123"
+    }
+  ]
+}
