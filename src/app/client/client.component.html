@@ -1,0 +1,12 @@
+<div class="client">
+    <p>Id: {{client.eid}}</p>
+    <p>Name: {{client.ename}}</p>
+    <p>Company: {{client.company}}</p>
+    <p>Phone: {{client.phone}}</p>
+    <p>Email: {{client.email}}</p>
+    <button (click)="delete(client)">Delete</button>
+    <button (click)="edit()">Edit</button>
+    <div class="container" *ngIf="editVisible == true">
+        <app-clientedit [client]="client"></app-clientedit>
+    </div>
+</div>

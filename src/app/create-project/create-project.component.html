@@ -33,12 +33,11 @@
             </div>
         </div>
         <div class="form-group">
-            <label>clientId</label>
-            <input type="text" name="clientId" class="form-control" [class.is-invalid]="clientId.touched && clientId.invalid" placeholder="clientId" [(ngModel)]="project.clientId" #clientId="ngModel" required pattern="^[0-9]+$" minlength="10">
-            <div *ngIf="clientId.touched && clientId.errors && clientId.invalid">
-                <small id="phoneHelp" class="text-danger" *ngIf="clientId.errors['required']">clientId Number Required</small>
-                <small id="phoneHelp" class="text-danger" *ngIf="clientId.errors['pattern']">clientId Number can only contain numbers</small>
-                <small id="phoneHelp" class="text-danger" *ngIf="clientId.errors['minlength']">clientId Number must be at least 10 characters</small>
+            <label>projectId</label>
+            <input type="text" name="projectId" class="form-control" [class.is-invalid]="projectId.touched && projectId.invalid" placeholder="projectId" [(ngModel)]="project.projectId" #projectId="ngModel" required pattern="^[0-9]+$" minlength="1">
+            <div *ngIf="projectId.touched && projectId.errors && projectId.invalid">
+                <small id="phoneHelp" class="text-danger" *ngIf="projectId.errors['required']">projectId Number Required</small>
+                <small id="phoneHelp" class="text-danger" *ngIf="projectId.errors['pattern']">projectId Number can only contain numbers</small>
             </div>
         </div>
         <!--{{ename.className}}-->

@@ -1,0 +1,10 @@
+<div *ngIf="clients.length > 0">
+    <div class="row">
+        <div *ngFor="let client of clients" class="col-6">
+        <app-client [client]="client"></app-client> 
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="clients.length <= 0">
+    <h1>You have no clients at the moment</h1>
+</div>

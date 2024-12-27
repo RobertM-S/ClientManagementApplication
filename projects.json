@@ -2,7 +2,7 @@
   "clients": [
     {
       "eid": "1",
-      "ename": "bob",
+      "ename": "BobishMan",
       "email": "bob@gmail.com",
       "phone": "1321312312",
       "company": "Company",
@@ -25,6 +25,58 @@
         "zipcode": "909090"
       },
       "id": "2"
+    },
+    {
+      "id": "3",
+      "eid": "3",
+      "ename": "Bob",
+      "email": "Bob@Bob.Com",
+      "phone": "123123123123",
+      "company": "Bobbington Ltd",
+      "address": {
+        "city": "Bobbington",
+        "country": "Bobland",
+        "zipcode": "12301923"
+      }
+    },
+    {
+      "id": "4",
+      "eid": "4",
+      "ename": "qwddasd",
+      "email": "asdads@asdasdasd.com",
+      "phone": "12312412312",
+      "company": "asdasdas",
+      "address": {
+        "city": "asdascas",
+        "country": "asasdqw",
+        "zipcode": "123123891238"
+      }
+    },
+    {
+      "id": "5",
+      "eid": "5",
+      "ename": "ManWell",
+      "email": "ManWell@myriad.com",
+      "phone": "89934593485",
+      "company": "ManWell Co",
+      "address": {
+        "city": "Khalrenya",
+        "country": "Innistrad",
+        "zipcode": "98102390324"
+      }
+    },
+    {
+      "id": "6",
+      "eid": "6",
+      "ename": "Riptide",
+      "email": "Riptide@Rapids.com",
+      "phone": "47839284293",
+      "company": "Riptide Rapids",
+      "address": {
+        "city": "Sanctuary",
+        "country": "Baleros",
+        "zipcode": "5793894857394"
+      }
     }
   ],
   "projects": [

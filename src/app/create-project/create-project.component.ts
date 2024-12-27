@@ -18,7 +18,7 @@ export class CreateProjectComponent {
     pid: "",
     pname: "",
     description: "",
-    clientId: "",
+    projectId: "",
     }
   }
 

@@ -2,6 +2,6 @@ export interface Project{
     pid:string,
     pname:string,
     description:string,
-    clientId:string,
+    projectId:string,
     id?: string;
 } 

@@ -7,8 +7,10 @@ import { authGuard } from './service/auth.guard';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { CreateMeetingComponent } from './create-meeting/create-meeting.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ClientsComponent } from './clients/clients.component';
 
 const routes: Routes = [
+  {path: 'clients', component:ClientsComponent},
   {path: 'addclient', component:CreateClientComponent, canActivate:[authGuard]},
   //{path: 'add', component:EmpformComponent, canActivate:[authGuard]},
   {path: 'login', component:LoginComponent},
@@ -17,7 +19,7 @@ const routes: Routes = [
   {path: 'addmeeting', component:CreateMeetingComponent, canActivate:[authGuard]},
 
   //{path: 'profile', component:ProfileComponent},
-  //{path:'' ,redirectTo:'employees',pathMatch:'full'},
+  {path:'' ,redirectTo:'clients',pathMatch:'full'},
   //{path:'employees/:id', component:ProfileComponent, canActivate:[authGuard],
   //  children:[
   //    {path:'detail', component:ProfiledetailComponent}

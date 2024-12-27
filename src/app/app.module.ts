@@ -17,6 +17,10 @@ import { LogoutComponent } from './logout/logout.component';
 import { CreateMeetingComponent } from './create-meeting/create-meeting.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ClientComponent } from './client/client.component';
+import { ClientsComponent } from './clients/clients.component';
+import { FooterComponent } from './footer/footer.component';
+import { ClienteditComponent } from './clientedit/clientedit.component';
 
 // @ - decorator
 
@@ -30,6 +34,10 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     CreateMeetingComponent,
     CreateProjectComponent,
     PagenotfoundComponent,
+    ClientComponent,
+    ClientsComponent,
+    FooterComponent,
+    ClienteditComponent,
   ],
   imports: [
     BrowserModule,
