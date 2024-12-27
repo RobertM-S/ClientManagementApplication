@@ -19,6 +19,9 @@ export class ProjecthttpService {
     return this.http.get<Project>(this.url+'/'+eid);
   }
 
+  getProjectsByClientId(eid:number):Observable<Project[]>{
+    return this.http.get<Project[]>(this.url+'?clientId='+eid);
+  }
   addProject(project:Project):Observable<Project>{
     project.id = project.pid;
     console.log(project);
@@ -27,7 +30,8 @@ export class ProjecthttpService {
 
   updateProject(project:Project):Observable<Project>{
     console.log(project);
-    return this.http.put<Project>(this.url+'/'+project.pid, project);
+    console.log(this.url)
+    return this.http.put<Project>(this.url+'/'+project.id, project);
   }
 
   deleteProject(eid:number){

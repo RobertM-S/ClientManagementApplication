@@ -1,0 +1,22 @@
+<h1>Project</h1>
+<div class="project">
+    <p>Id: {{project.id}}</p>
+    <p>Name: {{project.pname}}</p>
+    <p>Description: {{project.description}}</p>
+    <p>Client Id: {{project.clientId}}</p>
+</div>
+<h3>Meetings</h3>
+<div >
+    <div *ngIf="meeting.length > 0" class="row">
+        <div *ngFor="let meets of meeting" class="col-4">
+            <div class="project">
+                <p>Meeting Time: {{meets.time}}</p>
+                <button (click)="delete(meets)">Delete</button>
+                <button (click)="edit()">Edit</button>
+                <div class="container" *ngIf="editVisible == true">
+                    <app-meetingedit [meeting]="meets"></app-meetingedit>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

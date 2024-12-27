@@ -1,0 +1,15 @@
+<div>
+    <form #createmeeting = "ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>time</label>
+            <input type="text" name="time" class="form-control" [class.is-invalid]="time.touched && time.invalid" placeholder="time" [(ngModel)]="meeting.time" #time="ngModel" required pattern="^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$">
+            <div *ngIf="time.touched && time.errors && time.invalid">
+                <small id="timeHelp" class="text-danger" *ngIf="time.errors['required']">time Required</small>
+                <small id="timeHelp" class="text-danger" *ngIf="time.errors['pattern']">Must be a valid time</small>
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px; margin-bottom: 10px;">Submit</button>
+    </form>
+</div>

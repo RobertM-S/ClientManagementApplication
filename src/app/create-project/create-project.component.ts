@@ -18,23 +18,14 @@ export class CreateProjectComponent {
     pid: "",
     pname: "",
     description: "",
-    projectId: "",
+    clientId: "",
     }
   }
 
   project:Project
 
   onSubmit(){
-    //let employeeReturn = this.empservice.getEmployeeById(this.project.eid)
-    //console.log(employeeReturn);
     this.projectservice.addProject(this.project).subscribe((response: any)=>console.log(response));
-      
-    // this.empadded.emit(this.emp)
-    // console.log(this.emp);
-    //let myId = employees[employees.length-1].eid + 1;
-    //employees.push({eid:myId, ename: this.emp.ename, password: this.emp.password, email:this.emp.email, phone: this.emp.phone, address:{country:this.emp.address.country}});
   }
-
-  //random question but since its displaying based on the employee in data.ts, could we not just push and edit directly from the saveEmployee function in empform? 
 
 }

@@ -1,0 +1,25 @@
+<h1>Client</h1>
+<div class="client">
+    <p>Id: {{client.eid}}</p>
+    <p>Name: {{client.ename}}</p>
+    <p>Company: {{client.company}}</p>
+    <p>Phone: {{client.phone}}</p>
+    <p>Email: {{client.email}}</p>
+</div>
+<h3>Projects</h3>
+<div >
+    <div *ngIf="project.length > 0" class="row">
+        <div *ngFor="let pro of project" class="col-4">
+            <div class="client">
+                <p>Project Name: {{pro.pname}}</p>
+                <p>Project Description: {{pro.description}}</p>
+                <button (click)="delete(pro)">Delete</button>
+                <button (click)="edit()">Edit</button>
+                <button (click)="viewProjectProfile(pro.id)">Profile</button> 
+                <div class="container" *ngIf="editVisible == true">
+                    <app-projectedit [project]="pro"></app-projectedit>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,15 +1,5 @@
-<h3>Add New Project</h3>
 <div>
     <form #createproject = "ngForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label>Id</label>
-            <input type="text" name="pid" class="form-control" [class.is-invalid]="pid.touched && pid.invalid" placeholder="Id" [(ngModel)]="project.pid" #pid="ngModel" required pattern="^[0-9]+$" minlength="1">
-            <div *ngIf="pid.touched && pid.errors && pid.invalid">
-                <small id="idHelp" class="text-danger" *ngIf="pid.errors['required']">Id Required</small>
-                <small id="idHelp" class="text-danger" *ngIf="pid.errors['minlength']">Id can only have numbers</small>
-
-            </div>
-        </div>
         <div class="form-group">
             <label>Name</label>
             <input type="text" name="pname" class="form-control" [class.is-invalid]="pname.touched && pname.invalid" placeholder="Name" [(ngModel)]="project.pname" #pname="ngModel" required pattern="^[A-Za-z\s]+$" minlength="3">
@@ -29,14 +19,7 @@
                 <small id="emailHelp" class="text-danger" *ngIf="description.errors['pattern']">Must be a valid description</small>
             </div>
         </div>
-        <div class="form-group">
-            <label>clientId</label>
-            <input type="text" name="clientId" class="form-control" [class.is-invalid]="clientId.touched && clientId.invalid" placeholder="clientId" [(ngModel)]="project.clientId" #clientId="ngModel" required pattern="^[0-9]+$" minlength="1">
-            <div *ngIf="clientId.touched && clientId.errors && clientId.invalid">
-                <small id="phoneHelp" class="text-danger" *ngIf="clientId.errors['required']">clientId Number Required</small>
-                <small id="phoneHelp" class="text-danger" *ngIf="clientId.errors['pattern']">clientId Number can only contain numbers</small>
-            </div>
-        </div>
+
 
         <button type="submit" class="btn btn-primary" style="margin-top: 10px; margin-bottom: 10px;">Submit</button>
     </form>

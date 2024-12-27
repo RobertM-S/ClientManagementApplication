@@ -4,8 +4,9 @@
     <p>Company: {{client.company}}</p>
     <p>Phone: {{client.phone}}</p>
     <p>Email: {{client.email}}</p>
-    <button (click)="delete(client)">Delete</button>
-    <button (click)="edit()">Edit</button>
+    <button (click)="delete(client)" *ngIf="us.isAuthenticated()">Delete</button>
+    <button (click)="edit()" *ngIf="us.isAuthenticated()">Edit</button>
+    <button (click)="viewClientProfile(client.eid)">Profile</button> 
     <div class="container" *ngIf="editVisible == true">
         <app-clientedit [client]="client"></app-clientedit>
     </div>

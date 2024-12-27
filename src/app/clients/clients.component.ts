@@ -15,8 +15,6 @@ export class ClientsComponent {
   clients=clients;
 
   delete(client:any){
-    // let objindx = this.employees.findIndex(employee=>employee.eid === emp.eid);
-    // this.employees.splice(objindx,1)  
     this.clientservice.deleteClient(client.id).subscribe(response => console.log(response));
   }
 

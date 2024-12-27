@@ -2,10 +2,10 @@
   "clients": [
     {
       "eid": "1",
-      "ename": "BobishMan",
+      "ename": "Bobish",
       "email": "bob@gmail.com",
       "phone": "1321312312",
-      "company": "Company",
+      "company": "Bob Incorporated",
       "address": {
         "country": "India",
         "city": "Delhi",
@@ -109,6 +109,13 @@
       "description": "shalini@gmail.com",
       "clientId": "1",
       "id": "5"
+    },
+    {
+      "id": "banana",
+      "pid": "banana",
+      "pname": "banana",
+      "description": "bananana@banana.com",
+      "clientId": "3"
     }
   ],
   "meetings": [
@@ -129,20 +136,18 @@
       "time": "28/12/2024",
       "projectId": "3",
       "id": "3"
+    },
+    {
+      "id": "10",
+      "mid": "10",
+      "time": "23/12/2005",
+      "projectId": "1"
     }
   ],
   "users": [
     {
-      "username": "abc",
-      "password": "abc123"
-    },
-    {
-      "username": "pqr",
-      "password": "pqr123"
-    },
-    {
-      "username": "user",
-      "password": "user123"
+      "username": "Annathema",
+      "password": "Annalogue"
     }
   ]
 }

@@ -1,7 +1,7 @@
-export interface Project{ 
+export interface Project{
     pid:string,
     pname:string,
     description:string,
-    projectId:string,
+    clientId:string,
     id?: string;
 } 

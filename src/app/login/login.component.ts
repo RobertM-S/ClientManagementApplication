@@ -32,8 +32,6 @@ export class LoginComponent {
         this.loginValid = false;
       }
     }
-    //error: (errmsg) =>this.loginValid = false,
-
     })
   }
 

@@ -19,6 +19,10 @@ export class MeetinghttpService {
     return this.http.get<Meeting>(this.url+'/'+eid);
   }
 
+  getMeetingsByProjectId(eid:number):Observable<Meeting[]>{
+    return this.http.get<Meeting[]>(this.url+'?projectId='+eid);
+  }
+
   addMeeting(meeting:Meeting):Observable<Meeting>{
     meeting.id = meeting.mid;
     console.log(meeting);

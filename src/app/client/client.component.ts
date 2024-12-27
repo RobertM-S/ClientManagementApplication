@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Client } from '../model/client';
 import { ClienthttpService } from '../service/clienthttp.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-client',
@@ -13,7 +15,7 @@ export class ClientComponent {
   editVisible = false;
   @Input()
   client:Client
-  constructor(private clientservice:ClienthttpService) {
+  constructor(private clientservice:ClienthttpService, private route:ActivatedRoute, private router:Router, public us:UserService,) {
     this.client = {
       eid:"",
       ename: "", 
@@ -26,14 +28,16 @@ export class ClientComponent {
     }
   }
 
-  delete(client:any){
-    // let objindx = this.employees.findIndex(employee=>employee.eid === emp.eid);
-    // this.employees.splice(objindx,1)  
+  delete(client:any){ 
     this.clientservice.deleteClient(client.id).subscribe(response => console.log(response));
   }
 
   edit(){
     this.editVisible = !this.editVisible;
+  }
+
+  viewClientProfile(id:string){
+    this.router.navigate([id], {relativeTo:this.route}) 
   }
 
 }

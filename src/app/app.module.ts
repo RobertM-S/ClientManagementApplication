@@ -21,6 +21,10 @@ import { ClientComponent } from './client/client.component';
 import { ClientsComponent } from './clients/clients.component';
 import { FooterComponent } from './footer/footer.component';
 import { ClienteditComponent } from './clientedit/clientedit.component';
+import { ClientprofileComponent } from './clientprofile/clientprofile.component';
+import { ProjectprofileComponent } from './projectprofile/projectprofile.component';
+import { ProjecteditComponent } from './projectedit/projectedit.component';
+import { MeetingeditComponent } from './meetingedit/meetingedit.component';
 
 // @ - decorator
 
@@ -38,6 +42,10 @@ import { ClienteditComponent } from './clientedit/clientedit.component';
     ClientsComponent,
     FooterComponent,
     ClienteditComponent,
+    ClientprofileComponent,
+    ProjectprofileComponent,
+    ProjecteditComponent,
+    MeetingeditComponent,
   ],
   imports: [
     BrowserModule,
