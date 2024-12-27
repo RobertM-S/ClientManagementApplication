@@ -5,6 +5,9 @@
     <p>Company: {{client.company}}</p>
     <p>Phone: {{client.phone}}</p>
     <p>Email: {{client.email}}</p>
+    <p>Address: {{client.address.country}}</p>
+    <p *ngIf="typeof client.address.zipcode != undefined">Zipcode: {{client.address.zipcode}}</p>
+    <p *ngIf="typeof client.address.city != undefined">City: {{client.address.city}}</p>
 </div>
 <h3>Projects</h3>
 <div >
